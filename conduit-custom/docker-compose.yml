@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  conduit:
+    build: .
+    container_name: conduit-custom
+    ports:
+      - "8888:8008"
+    volumes:
+      - ./conduit-data:/var/lib/matrix-conduit
+    stdin_open: true
+    tty: true
+
+

@@ -1,0 +1,28 @@
+# Node/Python build artifacts (in case you add scripts/tools)
+node_modules/
+__pycache__/
+
+# Docker-specific
+*.log
+*.pid
+*.sock
+*.db
+*.sqlite3
+docker-compose.override.yml
+docker.env
+.env         # ⛔ Sensitive: contains credentials
+.DS_Store    # macOS junk file
+*.tar
+*.gz
+*.zip
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+
+# System temp files
+Thumbs.db
+desktop.ini

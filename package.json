@@ -1,0 +1,19 @@
+{
+  "name": "matrix-app",
+  "version": "1.0.0",
+  "main": "dist/matrix.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/matrix.js"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "common-tags": "^1.8.2",
+    "dotenv": "^17.2.0",
+    "matrix-bot-sdk": "^0.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.15",
+    "typescript": "^5.8.3"
+  }
+}

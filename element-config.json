@@ -1,0 +1,12 @@
+{
+  "default_server_config": {
+    "m.homeserver": {
+      "base_url": "http://matrix-dev:8888",
+      "server_name": "matrix-dev"
+    }
+  },
+  "disable_custom_urls": true,
+  "disable_guests": true,
+  "brand": "Local Element",
+  "default_theme": "dark"
+}

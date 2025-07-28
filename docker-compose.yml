@@ -1,0 +1,31 @@
+services:
+  conduit:
+    image: matrixconduit/matrix-conduit:latest
+    container_name: conduit
+    ports:
+      - "8888:8008"
+    volumes:
+      - ./conduit.toml:/etc/conduit.toml
+      - ./conduit-data:/var/lib/matrix-conduit
+    environment:
+      - CONDUIT_CONFIG=/etc/conduit.toml
+    restart: unless-stopped
+
+  element-web:
+    image: vectorim/element-web:latest
+    container_name: element-web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./element-config.json:/app/config.json
+    depends_on:
+      - conduit
+    restart: unless-stopped
+
+services:
+  matterbridge:
+  build: .
+  volumes:
+    - ./matterbridge.toml:/etc/matterbridge/matterbridge.toml
+  env_file:
+    - .env

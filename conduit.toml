@@ -1,0 +1,8 @@
+[global]
+address = "0.0.0.0"
+port = 8008
+server_name = "matrix-dev"                    # Change if you're using a real domain
+database_path = "/var/lib/matrix-conduit/"
+database_backend = "rocksdb"
+allow_registration = true
+log = "info"
